@@ -1,4 +1,3 @@
-//const ascitable = require('ascii-table');
 var string = "";
 var spaces = 36
 var decimalspaces = 0;
@@ -427,7 +426,6 @@ function NotificationExample() {
     Error("Example Notification");
     Error("With Title.", "Example Notification")
 }
-NotificationExample();
 
 
 // Exports
