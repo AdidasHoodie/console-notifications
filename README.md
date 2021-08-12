@@ -12,8 +12,8 @@ Then...
 var notifications = require('console-notifications'); // Importing Package
 
 // Success
-notifications.Sucess("Success notification"); // arg 1 = Message
-notifications.Sucess("With Title", "Success notification"); // arg 1 = Message, arg 2 = Title
+notifications.Success("Success notification"); // arg 1 = Message
+notifications.Success("With Title", "Success notification"); // arg 1 = Message, arg 2 = Title
 
 // Warning
 notifications.Warning("Warning notification"); // arg 1 = Message
