@@ -32,11 +32,11 @@ notifications.ExampleNotify();
 
 Console Notifications supports only 2 arguments, The 2nd argument is optional.
 
-* - ``Message`` The first argument is message which is message of the Notification.
+* ``Message`` The first argument is message which is message of the Notification.
 * ``Title`` The second argument is Title. Which is optional. It's title of Notificaiton.
 
 
 ## In Progress
 
 Now i'm working on:
-@@ ``Making the arguments be automatically sized`` @@
+``Making the arguments be automatically sized``
