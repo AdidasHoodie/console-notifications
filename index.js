@@ -1,6 +1,7 @@
 var string = "";
 var spaces = 36
 var decimalspaces = 0;
+const chalk = require('chalk')
 
 function isdecimalint(integer) {
     return !Number.isInteger(integer);
@@ -12,7 +13,7 @@ function isdecimalint(integer) {
 function Success(Message, Title) {
     if(!Title){
         if(Message.length <= 31) {
-            console.log('\x1b[32m', '')
+            console.log(chalk.green(''))
             console.log(".------------------------------------.")
             console.log("|                 ✔                  |")
             console.log(":------------------------------------:")
@@ -41,21 +42,21 @@ function Success(Message, Title) {
             string = "";
             console.log("|                                    |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
         else {
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("| 💥 |  An Error Has occured!        |")
             console.log("| 💥 |  The argumetns length are     |")
             console.log("| 💥 |  Too Much to make Notify run  |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
     }
     else {
         if (Message.length <= 31 && Title.length <= 31) {
-            console.log('\x1b[32m', '')
+            console.log(chalk.green(''))
             console.log(".------------------------------------.")
             console.log("|                 ✔                  |")
             console.log(":------------------------------------:")
@@ -91,7 +92,7 @@ function Success(Message, Title) {
                 console.log("'------------------------------------'")
                 decimalspaces = 0;
                 string = "";
-                console.log('\x1b[0m', '')
+                chalk.stripColor()
             }
             else {
                 for (i = 0; i != decimalspaces; i++)
@@ -120,18 +121,18 @@ function Success(Message, Title) {
                 console.log("'------------------------------------'")
                 decimalspaces = 0;
                 string = "";
-                console.log('\x1b[0m', '')
+                chalk.stripColor()
             }
             
         }
         else {
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("| 💥 |  An Error Has occured!        |")
             console.log("| 💥 |  The argumetns length are     |")
             console.log("| 💥 |  Too Much to make Notify run  |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
     }
 }
@@ -141,7 +142,7 @@ function Success(Message, Title) {
 function Warning(Message, Title) {
     if(!Title){
         if(Message.length <= 31) {
-            console.log('\x1b[33m', '')
+            console.log(chalk.orange(''))
             console.log(".------------------------------------.")
             console.log("|                 ⚠                  |")
             console.log(":------------------------------------:")
@@ -169,16 +170,16 @@ function Warning(Message, Title) {
             spaces = 36;
             console.log("|                                    |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
         else {
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("| 💥 |  An Error Has occured!        |")
             console.log("| 💥 |  The argumetns length are     |")
             console.log("| 💥 |  Too Much to make Notify run  |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
     }
     else {
@@ -188,7 +189,7 @@ function Warning(Message, Title) {
             for (i = 0; i != spaces; i++)
                 string = string + " ";
             spaces = 32;
-            console.log('\x1b[33m', '')
+            console.log(chalk.orange(''))
             console.log(".------------------------------------.")
             console.log("|                 ⚠                  |")
             console.log(":------------------------------------:")
@@ -229,7 +230,7 @@ function Warning(Message, Title) {
                 console.log("'------------------------------------'")
                 decimalspaces = 0;
                 string = "";
-                console.log('\x1b[0m', '')
+                chalk.stripColor()
             }
             else {
                 for (i = 0; i != decimalspaces; i++)
@@ -258,18 +259,18 @@ function Warning(Message, Title) {
                 console.log("'------------------------------------'")
                 decimalspaces = 0;
                 string = "";
-                console.log('\x1b[0m', '')
+                chalk.stripColor()
             }
             
         }
         else {
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("| 💥 |  An Error Has occured!        |")
             console.log("| 💥 |  The argumetns length are     |")
             console.log("| 💥 |  Too Much to make Notify run  |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
     }
 }
@@ -279,7 +280,7 @@ function Warning(Message, Title) {
 function Error(Message, Title) {
     if (!Title) {
         if (Message.length <= 31) {
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("|                 ❌                 |")
             console.log(":------------------------------------:")
@@ -307,16 +308,16 @@ function Error(Message, Title) {
             spaces = 36;
             console.log("|                                    |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
         else {
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("| 💥 |  An Error Has occured!        |")
             console.log("| 💥 |  The argumetns length are     |")
             console.log("| 💥 |  Too Much to make Notify run  |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
     }
     else {
@@ -326,7 +327,7 @@ function Error(Message, Title) {
             for (i = 0; i != spaces; i++)
                 string = string + " ";
             spaces = 32;
-            console.log('\x1b[31m', '')
+            console.log(chalk.red(''))
             console.log(".------------------------------------.")
             console.log("|                 ❌                 |")
             console.log(":------------------------------------:")
@@ -366,7 +367,7 @@ function Error(Message, Title) {
                 console.log("'------------------------------------'")
                 decimalspaces = 0;
                 string = "";
-                console.log('\x1b[0m', '')
+                chalk.stripColor()
             }
             else {
                 for (i = 0; i != decimalspaces; i++)
@@ -395,18 +396,18 @@ function Error(Message, Title) {
                 console.log("'------------------------------------'")
                 decimalspaces = 0;
                 string = "";
-                console.log('\x1b[0m', '')
+                chalk.stripColor()
             }
 
         }
         else {
-            console.log('\x1b[31m', '')
+            console.log(color.red(''))
             console.log(".------------------------------------.")
             console.log("| 💥 |  An Error Has occured!        |")
             console.log("| 💥 |  The argumetns length are     |")
             console.log("| 💥 |  Too Much to make Notify run  |")
             console.log("'------------------------------------'")
-            console.log('\x1b[0m', '')
+            chalk.stripColor()
         }
     }
 }
